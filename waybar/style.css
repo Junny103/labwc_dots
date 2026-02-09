@@ -1,0 +1,129 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: rgba(25, 23, 36, 0.75);
+}
+
+#taskbar {
+  margin-left: 10px;
+}
+
+#taskbar button.active {
+  background: #26233a;
+  border-radius: 0px;
+}
+
+#taskbar button:hover {
+  border-radius: 0px;
+}
+
+#clock,
+#network,
+#backlight,
+#temperature,
+#battery,
+#pulseaudio {
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+#clock {
+  color: #e0def4;
+  margin: 0 5px;
+}
+
+#network {
+  color: #eb6f92;
+  margin: 0 5px;
+  border-bottom: 2px solid #f7768e;
+}
+
+#backlight {
+  color: #e0def4;
+  margin: 0 5px;
+  border-bottom: 2px solid #c6dbda;
+}
+
+#temperature {
+  color: #7287fd;
+  margin: 0 5px;
+  border-bottom: 2px solid #7287fd;
+}
+
+#temperature.critical {
+  color: #bf616a;
+  border-bottom: 2px solid #bf616a;
+}
+
+#battery {
+  color: #9ece6a;
+  margin: 0 5px;
+  border-bottom: 2px solid #9ece6a;
+}
+
+#battery.charging {
+  color: #9ece6a;
+  border-bottom: 2px solid #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+  color: #cc3333;
+  border-bottom: 2px solid #cc3333;
+}
+
+#battery.critical:not(.charging) {
+  color: #ff3333;
+  border-bottom: 2px solid #ff3333;
+}
+
+#pulseaudio {
+  color: #e0af68;
+  margin: 0 5px;
+  border-bottom: 2px solid #e0af68;
+}
+
+#custom-power-icon {
+  color: #191724;
+  background: #ff4734;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 10px;
+}
+
+#custom-power {
+  color: #ff4734;
+  margin-right: 5px;
+  padding: 0 5px;
+}
+
+#custom-power:hover {
+  color: #191714;
+  background: #ff4734;
+  margin: 5px 0;
+}
+
+#custom-reboot {
+  color: #ff4734;
+  margin-right: 5px;
+  padding: 0 5px;
+}
+
+#custom-reboot:hover {
+  color: #191714;
+  background: #ff4734;
+  margin: 5px 0;
+}
+
+#custom-logout {
+  color: #ff4734;
+  margin-right: 5px;
+  padding: 0 5px;
+}
+
+#custom-logout:hover {
+  color: #000000;
+  background: #ff4734;
+  margin: 5px 0;
+}

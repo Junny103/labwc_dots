@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+
+  <core>
+    <gap>6</gap>
+  </core>
+
+  <theme>
+    <cornerRadius>0</cornerRadius>
+  </theme>
+
+  <margin top="7" bottom="9" left="9" right="9" />
+
+</labwc_config>
