@@ -5,7 +5,8 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y --no-install-recommends \
     labwc wlr-randr greetd tuigreet waybar swaybg alacritty \
     firefox-esr fcitx5 fcitx5-hangul fonts-noto-cjk \
-    thunar mousepad wl-clipboard cliphist wofi
+    thunar mousepad wl-clipboard cliphist wofi \
+    pipewire wireplumber pipewire-pulse
 
 # 2. Download and install JetBrainsMono Nerd Font
 echo "Downloading and installing JetBrainsMono Nerd Font..."
