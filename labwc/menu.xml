@@ -7,7 +7,7 @@
     <action name="Execute" command="lab-sensible-terminal" />
   </item>
   <item label="File Manager">
-    <action name="Execute" command="alacritty -e ranger" />
+    <action name="Execute" command="thunar" />
   </item>
   <item label="Web Browser">
     <action name="Execute" command="firefox-esr" />
