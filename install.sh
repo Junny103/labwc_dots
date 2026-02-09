@@ -22,7 +22,7 @@ sudo tee /etc/greetd/config.toml > /dev/null <<EOF
 vt = 1
 
 [default_session]
-command = "tuigreet --remember --cmd labwc"
+command = "tuigreet --asterisks --remember --cmd labwc"
 user = "greeter"
 EOF
 
