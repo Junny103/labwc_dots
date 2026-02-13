@@ -12,6 +12,7 @@
   ],
   "modules-right": [
     "network",
+    "group/audio-slider",
     "backlight",
     "temperature",
     "battery",
