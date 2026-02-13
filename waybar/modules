@@ -1,6 +1,7 @@
 {
   "wlr/taskbar": {
     "format": "{icon}",
+    "icon-size": 15,
     "tooltip-format": "{title}",
     "on-click": "activate"
   },
@@ -14,11 +15,42 @@
  
   "network": {
     "format-wifi": "{icon} {essid}",
-    "format-alt": "{icon} {ipaddr}",
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     "format-disconnected": "󰤮 Disconnected",
     "tooltip-format-wifi": "{icon} {essid} ({frequency} GHz) ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "interval": 1
+  },
+
+  "group/audio-slider": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "click-to-reveal": true
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+
+  "pulseaudio": { 
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂰",
+    "format-muted": "󰖁 ",
+    "format-icons": {
+      "headphone": "",
+      "default": [
+        "",
+        " ",
+        " "
+      ]
+    }
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
   },
 
   "backlight": {
@@ -57,41 +89,11 @@
     }
   },
 
-  "pulseaudio": {
-    "on-click": "~/.config/waybar/scripts/Volume.sh --toggle",
-    "on-click-right": "pavucontrol -t 3",
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "󰂰",
-    "format-muted": "󰖁 ",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
-  },
-
-  "pulseaudio#microphone": {
-    "format": "{format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": "",
-    "on-click": "~/.config/waybar/scripts/Volume.sh --toggle-mic",
-    "on-click-right": "pavucontrol -t 4",
-    "tooltip-format": "{source_desc} | {source_volume}%",
-  },
-
   "group/power": {
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 600,
-      "children-class": "not-power"
+      "click-to-reveal": true
     },
     "modules": [
       "custom/power-icon",
