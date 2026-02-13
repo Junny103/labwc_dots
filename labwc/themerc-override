@@ -1,22 +1,20 @@
-window.active.title.bg.color: #191724E6
-window.active.label.text.color: #e0def4
-window.active.handle.bg.color: #191724
+window.active.title.bg.color: #11111bBF
+window.active.label.text.color: #a6adc8
 
-window.inactive.title.bg.color: #191724E6
-window.inactive.label.text.color: #aeacc0
-window.inactive.handle.bg.color: #191724
+window.inactive.title.bg.color: #11111bBF
+window.inactive.label.text.color: #a6adc8
 
-window.active.border.color: #c4a7e7
-window.inactive.border.color: #191724
+window.active.border.color: #11111b
+window.inactive.border.color: #11111b
 
-window.active.button.unpressed.image.color: #e0def4
-window.inactive.button.unpressed.image.color: #aeacc0
+window.active.button.unpressed.image.color: #a6adc8
+window.inactive.button.unpressed.image.color: #11111b
 
-osd.bg.color: #191724E6
-osd.border.color: #c4a7e7
-osd.label.text.color: #e0def4
+osd.bg.color: #11111bBF
+osd.border.color: #11111b
+osd.label.text.color: #a6adc8
 
-menu.items.bg.color: #191724E6
-menu.items.text.color: #aeacc0
-menu.items.active.bg.color: #26223a
-menu.items.active.text.color: #e0def4
+menu.items.bg.color: #11111bBF
+menu.items.text.color: #a6adc8
+menu.items.active.bg.color: #414356
+menu.items.active.text.color: #cdd6f4
