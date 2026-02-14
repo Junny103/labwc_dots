@@ -2,6 +2,10 @@
 
 <labwc_config>
 
+  <placement>
+    <policy>automatic</policy>
+  </placement>
+
   <core>
     <gap>3</gap>
   </core>
