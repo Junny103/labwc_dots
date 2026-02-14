@@ -7,6 +7,13 @@ window#waybar {
   background-color: rgba(17, 17, 27, 0.75);
 }
 
+tooltip {
+  color: #a6adc8;
+  background-color: rgba(17, 17, 27, 0.75);
+  border: none;
+  border-radius: 0px;
+}
+
 #taskbar {
   margin-left: 10px;
 }
