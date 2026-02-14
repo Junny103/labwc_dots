@@ -1,9 +1,15 @@
 {
+
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 15,
     "tooltip-format": "{title}",
     "on-click": "activate"
+  },
+
+  "custom/cava": {
+    "format": "{}",
+    "exec": "~/.config/waybar/script/cava.sh"
   },
 
   "clock": {
@@ -39,11 +45,7 @@
     "format-muted": "󰖁 ",
     "format-icons": {
       "headphone": "",
-      "default": [
-        "",
-        " ",
-        " "
-      ]
+      "default": [""," "," "]
     }
   },
 
@@ -61,7 +63,7 @@
 
   "temperature": {
     "format": "{icon} {temperatureC}°C",
-    "format-icons": ["󰈸"],
+    "format-icons": ["󰸄", "󱃃", "󰸁"],
     "format-critical": "{icon} {temperatureC}°C",
     "critical-threshold": 82,
     "tooltip": false,
