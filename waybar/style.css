@@ -1,6 +1,6 @@
 * {
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 13px;
+  font-size: 11px;
 }
 
 window#waybar {
@@ -11,20 +11,18 @@ window#waybar {
   margin-left: 10px;
 }
 
-#taskbar button.active {
-  background: #414356;
-  border-radius: 0px;
-  margin: 5px 3px;
-  padding: 0 7px;
-}
-
-#taskbar button:hover {
-  background: #414356;
+#taskbar button {
+  background: transparent;
   box-shadow: none;
   border: none;
   border-radius: 0px;
   margin: 5px 3px;
   padding: 0 7px;
+}
+
+#taskbar button:hover,
+#taskbar button.active {
+  background: #414356;
 }
 
 #clock,
@@ -114,7 +112,7 @@ window#waybar {
 #custom-power-icon {
   color: #11111b;
   background: #f38ba8;
-  margin: 5px 4px 5px 2px;
+  margin: 5px 10px 5px 2px;
   padding: 5px 10px;
 }
 
