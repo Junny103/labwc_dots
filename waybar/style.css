@@ -38,8 +38,14 @@ window#waybar {
   padding: 0 10px;
 }
 
+#custom-cava {
+  color: #cba6f7;
+  margin-top: 5px;
+  font-size: 6px;
+}
+
 #clock {
-  background: #b4befe;
+  color: #b4befe;
 }
 
 #network {
