@@ -8,7 +8,9 @@
     "wlr/taskbar"
   ],
   "modules-center": [
-    "clock"
+    "custom/cava",
+    "clock",
+    "custom/cava"
   ],
   "modules-right": [
     "network",
