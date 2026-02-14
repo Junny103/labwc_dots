@@ -8,7 +8,7 @@ window.active.border.color: #11111b
 window.inactive.border.color: #11111b
 
 window.active.button.unpressed.image.color: #a6adc8
-window.inactive.button.unpressed.image.color: #11111b
+window.inactive.button.unpressed.image.color: #a6adc8
 
 osd.bg.color: #11111bBF
 osd.border.color: #11111b
