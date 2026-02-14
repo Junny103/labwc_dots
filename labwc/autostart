@@ -1,4 +1,4 @@
 wlr-randr --output DSI-1 --transform 270 &
+fcitx5 -d &
 waybar &
 swaybg -i ~/bg.jpg -m fill &
-fcitx5 -d &
