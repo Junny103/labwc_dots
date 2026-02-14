@@ -18,3 +18,4 @@ menu.items.bg.color: #11111bBF
 menu.items.text.color: #a6adc8
 menu.items.active.bg.color: #414356
 menu.items.active.text.color: #cdd6f4
+menu.separator.color: #a6adc8
