@@ -10,7 +10,7 @@ window#waybar {
 tooltip {
   background-color: rgba(17, 17, 27, 0.75);
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 tooltip label {
@@ -25,7 +25,7 @@ tooltip label {
   background: transparent;
   box-shadow: none;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   margin: 5px 2px;
   padding: 0 7px;
 }
@@ -41,7 +41,8 @@ tooltip label {
 #backlight,
 #temperature,
 #battery {
-  color: #11111b;
+  background: #11111b;
+  border-radius: 10px;
   margin: 5px 2px;
   padding: 0 10px;
 }
@@ -62,6 +63,7 @@ tooltip label {
 
 #pulseaudio {
   background: #74c7ec;
+
 }
 
 #backlight {
@@ -74,7 +76,6 @@ tooltip label {
 
 #temperature.critical {
   background: #f38ba8;
-  padding: 0 10px;
 }
 
 #battery {
@@ -83,17 +84,14 @@ tooltip label {
 
 #battery.charging {
   background: #a6e3a1;
-  padding: 0 10px;
 }
 
 #battery.warning:not(.charging) {
   background: #f9e2af;
-  padding: 0 10px;
 }
 
 #battery.critical:not(.charging) {
   background: #f38ba8;
-  padding: 0 10px;
 }
 
 #pulseaudio-slider {
@@ -122,6 +120,7 @@ tooltip label {
 #custom-power-icon {
   color: #11111b;
   background: #f38ba8;
+  border-radius: 10px;
   margin: 5px 10px 5px 2px;
   padding: 5px 10px;
 }
@@ -135,6 +134,7 @@ tooltip label {
 #custom-power:hover {
   color: #11111b;
   background: #f38ba8;
+  border-radius: 10px;
   margin: 5px 2px 5px 0;
   padding: 0 5px;
 }
@@ -148,6 +148,7 @@ tooltip label {
 #custom-reboot:hover {
   color: #11111b;
   background: #f38ba8;
+  border-radius: 10px;
   margin: 5px 2px 5px 0;
   padding: 0 5px;
 }
@@ -161,6 +162,7 @@ tooltip label {
 #custom-logout:hover {
   color: #11111b;
   background: #f38ba8;
+  border-radius: 10px;
   margin: 5px 10px 5px 0;
   padding: 0 5px;
 }
