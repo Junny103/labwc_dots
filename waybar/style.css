@@ -8,10 +8,13 @@ window#waybar {
 }
 
 tooltip {
-  color: #a6adc8;
   background-color: rgba(17, 17, 27, 0.75);
   border: none;
   border-radius: 0px;
+}
+
+tooltip label {
+  color: #a6adc8;
 }
 
 #taskbar {
