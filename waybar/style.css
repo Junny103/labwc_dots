@@ -82,11 +82,13 @@ tooltip label {
 #pulseaudio-slider highlight {
   background: #74c7ec;
   border: none;
+  border-radius: 10px;
 }
 
 #pulseaudio-slider trough {
   background: #414356;
   border: none;
+  border-radius: 10px;
 }
 
 #backlight {
