@@ -9,14 +9,17 @@ sudo apt install -y --no-install-recommends \
     pipewire wireplumber pipewire-pulse cava \
     lxappearance librsvg2-common waybar swaybg firefox-esr \
 
-# 2. Download and install JetBrainsMono Nerd Font
+# 2. Download themes and icons
+git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
+
+# 3. Download and install JetBrainsMono Nerd Font
 echo "Downloading and installing JetBrainsMono Nerd Font..."
 wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
 sudo mkdir -p /usr/local/share/fonts/JetBrainsMono
 sudo unzip /tmp/JetBrainsMono.zip -d /usr/local/share/fonts/JetBrainsMono
 sudo fc-cache -fv
 
-# 3. Set boot target to graphical and enable greetd service
+# 4. Set boot target to graphical and enable greetd service
 sudo systemctl set-default graphical.target
 
 echo "----------------------------------------------------"
