@@ -36,7 +36,17 @@ tooltip label {
   background: #414356;
 }
 
-#clock,
+#custom-cava {
+  color: #cba6f7;
+  margin-top: 5px;
+  font-size: 6px;
+}
+
+#clock {
+  color: #b4befe;
+  padding: 0 10px;
+}
+
 #network,
 #pulseaudio,
 #backlight,
@@ -48,22 +58,35 @@ tooltip label {
   padding: 0 10px;
 }
 
-#custom-cava {
-  color: #cba6f7;
-  margin-top: 5px;
-  font-size: 6px;
-}
-
-#clock {
-  color: #b4befe;
-}
-
 #network {
   background: #89b4fa;
 }
 
 #pulseaudio {
   background: #74c7ec;
+}
+
+#pulseaudio-slider {
+  min-width: 80px;
+  padding: 0 3px;
+}
+ 
+#pulseaudio-slider slider {
+  background-image: none;
+  border: none;
+  min-height: 0;
+  min-width: 0;
+  margin: 2px;
+}
+
+#pulseaudio-slider highlight {
+  background: #74c7ec;
+  border: none;
+}
+
+#pulseaudio-slider trough {
+  background: #414356;
+  border: none;
 }
 
 #backlight {
@@ -92,29 +115,6 @@ tooltip label {
 
 #battery.critical:not(.charging) {
   background: #f38ba8;
-}
-
-#pulseaudio-slider {
-  min-width: 80px;
-  padding: 0 3px;
-}
- 
-#pulseaudio-slider slider {
-  background-image: none;
-  border: none;
-  min-height: 0;
-  min-width: 0;
-  margin: 2px;
-}
-
-#pulseaudio-slider highlight {
-  background: #74c7ec;
-  border: none;
-}
-
-#pulseaudio-slider trough {
-  background: #414356;
-  border: none;
 }
 
 #custom-power-icon {
