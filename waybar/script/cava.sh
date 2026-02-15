@@ -1,19 +1,33 @@
-#! /bin/bash
+#!/bin/bash
 
+# Not my own work. Credit to original author
+
+#----- Optimized bars animation without much CPU usage increase --------
 bar="▁▂▃▄▅▆▇█"
-dict="s/;//g;"
-i=0
-while [ $i -lt ${#bar} ]; do
-  dict="${dict}s/$i/${bar:$i:1}/g;"
-  i=$((i+1))
+dict="s/;//g"
+
+# Calculate the length of the bar outside the loop
+bar_length=${#bar}
+
+# Create dictionary to replace char with bar
+for ((i = 0; i < bar_length; i++)); do
+    dict+=";s/$i/${bar:$i:1}/g"
 done
 
-# write cava config (lower framerate, fewer bars)
-config_file="/tmp/waybar_cava_config"
-cat > "$config_file" <<'EOF'
+# Create cava config
+config_file="/tmp/bar_cava_config"
+cat >"$config_file" <<EOF
 [general]
-framerate = 15        # <= 낮출수록 CPU 절약 (예: 10~20 권장)
-bars = 10             # 막대 수를 줄이면 연산량 감소
+# Older systems show significant CPU use with default framerate
+# Setting maximum framerate to 30  
+# You can increase the value if you wish
+framerate = 15
+bars = 10
+
+[input]
+method = pulse
+source = auto
+
 [output]
 method = raw
 raw_target = /dev/stdout
@@ -21,5 +35,8 @@ data_format = ascii
 ascii_max_range = 7
 EOF
 
-# run cava and map digits -> bars in a single sed process
+# Kill cava if it's already running
+pkill -f "cava -p $config_file"
+
+# Read stdout from cava and perform substitution in a single sed command
 cava -p "$config_file" | sed -u "$dict"
