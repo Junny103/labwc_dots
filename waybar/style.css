@@ -125,26 +125,14 @@ tooltip label {
   padding: 5px 10px;
 }
 
-#custom-power {
-  color: #f38ba8;
-  margin: 5px 2px 5px 0;
-  padding: 0 5px;
-}
-
-#custom-power:hover {
-  color: #11111b;
-  background: #f38ba8;
-  border-radius: 10px;
-  margin: 5px 2px 5px 0;
-  padding: 0 5px;
-}
-
+#custom-power,
 #custom-reboot {
   color: #f38ba8;
   margin: 5px 2px 5px 0;
   padding: 0 5px;
 }
 
+#custom-power:hover,
 #custom-reboot:hover {
   color: #11111b;
   background: #f38ba8;
