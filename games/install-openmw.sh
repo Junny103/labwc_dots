@@ -7,8 +7,9 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y --no-install-recommends \
     cmake libfreetype-dev libluajit-5.1-dev \
     libsqlite3-dev libopenal-dev zlib1g-dev \
-    libbullet-dev libunshield-dev ffmpeg
-
+    libbullet-dev libunshield-dev ffmpeg \
+    libgl1-mesa-dev liblz4-dev
+    
 # 2. MyGUI build (~/src)
 mkdir -p ~/src && cd ~/src
 if [ ! -d "mygui" ]; then
@@ -28,8 +29,8 @@ cmake .. \
 
 make -j"$(nproc)"
 
-# 3. OpenMW build (~/Downloads)
-mkdir -p ~/Downloads && cd ~/Downloads
+# 3. OpenMW build (~/games)
+mkdir -p ~/games && cd ~/games
 if [ ! -d "openmw" ]; then
     git clone https://gitlab.com/OpenMW/openmw.git
 fi
