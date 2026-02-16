@@ -11,7 +11,11 @@ sudo apt install -y --no-install-recommends \
     libgl1-mesa-dev liblz4-dev qt6-base-dev \
     qt6-tools-dev qt6-tools-dev-tools \
     qt6-svg-dev libicu-dev libcollada-dom-dev \
-    libyaml-cpp-dev
+    libyaml-cpp-dev libavcodec-dev libavformat-dev \
+    libavutil-dev libswscale-dev libswresample-dev \
+    libopenscenegraph-dev libopenthreads-dev openscenegraph \
+    libboost-all-dev
+
 # 2. MyGUI build (~/src)
 mkdir -p ~/src && cd ~/src
 if [ ! -d "mygui" ]; then
