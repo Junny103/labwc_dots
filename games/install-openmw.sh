@@ -14,7 +14,7 @@ sudo apt install -y --no-install-recommends \
     libyaml-cpp-dev libavcodec-dev libavformat-dev \
     libavutil-dev libswscale-dev libswresample-dev \
     libopenscenegraph-dev libopenthreads-dev openscenegraph \
-    libboost-all-dev
+    libboost-all-dev libsdl2-dev
 
 # 2. MyGUI build (~/src)
 mkdir -p ~/src && cd ~/src
