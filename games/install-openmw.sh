@@ -43,4 +43,4 @@ cmake .. \
 
 make -j"$(nproc)"
 
-echo "Done: ~/Downloads/openmw/build"
+echo "Done: ~/games/openmw/build"
