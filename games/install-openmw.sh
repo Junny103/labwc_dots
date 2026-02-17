@@ -7,14 +7,13 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y --no-install-recommends \
     cmake libfreetype-dev libluajit-5.1-dev \
     libsqlite3-dev libopenal-dev zlib1g-dev \
-    libbullet-dev libunshield-dev ffmpeg \
-    libgl1-mesa-dev liblz4-dev qt6-base-dev \
-    qt6-tools-dev qt6-tools-dev-tools \
-    qt6-svg-dev libicu-dev libcollada-dom-dev \
-    libyaml-cpp-dev libavcodec-dev libavformat-dev \
-    libavutil-dev libswscale-dev libswresample-dev \
-    libopenscenegraph-dev libopenthreads-dev openscenegraph \
-    libboost-all-dev libsdl2-dev
+    libbullet-dev libunshield-dev libgl1-mesa-dev \
+    liblz4-dev libicu-dev libcollada-dom-dev \
+    libyaml-cpp-dev qt6-base-dev qt6-tools-dev \
+    qt6-tools-dev-tools qt6-svg-dev \
+    libavcodec-dev libavformat-dev libavutil-dev \
+    libswscale-dev libswresample-dev \
+    libopenscenegraph-dev libsdl2-dev libboost-all-dev
 
 # 2. MyGUI build (~/src)
 mkdir -p ~/src && cd ~/src
