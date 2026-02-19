@@ -27,7 +27,7 @@ cd ../..
 echo "4. Restart binfmt"
 sudo systemctl restart systemd-binfmt
 
-echo "5. Install Wine"
+echo "5. Install Wine32"
 sudo apt install -y wine32
 
 echo "----------------------------------------------------"
