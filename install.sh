@@ -1,6 +1,7 @@
 #!/bin/bash
+set -e
 
-# 1. Update system and install packages
+echo "1. Update system and install packages"
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y --no-install-recommends \
     labwc wlr-randr greetd tuigreet alacritty \
@@ -9,17 +10,17 @@ sudo apt install -y --no-install-recommends \
     pipewire wireplumber pipewire-pulse cava \
     lxappearance librsvg2-common waybar swaybg firefox-esr \
 
-# 2. Download themes and icons
+echo "2. Download themes and icons"
 git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
 
-# 3. Download and install JetBrainsMono Nerd Font
+echo "3. Download and install JetBrainsMono Nerd Font"
 echo "Downloading and installing JetBrainsMono Nerd Font..."
 wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
 sudo mkdir -p /usr/local/share/fonts/JetBrainsMono
 sudo unzip /tmp/JetBrainsMono.zip -d /usr/local/share/fonts/JetBrainsMono
 sudo fc-cache -fv
 
-# 4. Set boot target to graphical and enable greetd service
+echo "4. Set boot target to graphical and enable greetd service"
 sudo systemctl set-default graphical.target
 
 echo "----------------------------------------------------"
