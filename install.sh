@@ -19,11 +19,7 @@ sudo mkdir -p /usr/local/share/fonts/JetBrainsMono
 sudo unzip /tmp/JetBrainsMono.zip -d /usr/local/share/fonts/JetBrainsMono
 sudo fc-cache -fv
 
-# 4. Install Pi-Apps
-echo "Installing Pi-Apps..."
-wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
-
-# 5. Set boot target to graphical and enable greetd service
+# 4. Set boot target to graphical and enable greetd service
 sudo systemctl set-default graphical.target
 
 echo "----------------------------------------------------"
