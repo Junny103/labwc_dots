@@ -10,24 +10,7 @@ echo "2. Install build tools"
 sudo apt install -y \
 cmake gcc-arm-linux-gnueabihf \
 
-echo "3. Build and install box64"
-git clone https://github.com/ptitSeb/box64 || true
-cd box64
-mkdir -p build && cd build
-
-cmake .. \
- -D ARM_DYNAREC=ON \
- -D RPI4ARM64=1 \
- -D CMAKE_BUILD_TYPE=RelWithDebInfo \
- -D BOX32=ON \
- -D BOX32_BINFMT=ON
-
-make -j$(nproc)
-sudo make install
-
-cd ../..
-
-echo "4. Build and install box86"
+echo "3. Build and install box86"
 git clone https://github.com/ptitSeb/box86 || true
 cd box86
 mkdir -p build && cd build
@@ -41,19 +24,11 @@ sudo make install
 
 cd ../..
 
-echo "5. Restart binfmt"
+echo "4. Restart binfmt"
 sudo systemctl restart systemd-binfmt
 
-echo "6. Install Wine"
-sudo apt install -y wine
-
-echo "7. Verify installation"
-echo "--- box64 ---"
-box64 -v || true
-echo "--- box86 ---"
-box86 -v || true
-echo "--- wine ---"
-wine --version || true
+echo "5. Install Wine"
+sudo apt install -y wine32
 
 echo "----------------------------------------------------"
 echo "Installation complete!"
