@@ -13,11 +13,6 @@
     <action name="Execute" command="firefox-esr" />
   </item>
   <separator />
-  <menu id="utilities-menu" label="Utility">
-    <item label="Pi-apps">
-      <action name="Execute" command="pi-apps" />
-    </item>
-  </menu>
   <item label="Themes">
     <action name="Execute" command="lxappearance" />
   </item>
