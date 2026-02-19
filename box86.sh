@@ -1,5 +1,5 @@
 # 1. multiarch
-sudo apt install --no-install-recommends gcc-arm-linux-gnueabihf -y
+sudo apt install gcc-arm-linux-gnueabihf -y
 
 # 2. box86
 git clone https://github.com/ptitSeb/box86
