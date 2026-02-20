@@ -45,8 +45,6 @@ echo "4. Restart binfmt"
 sudo systemctl restart systemd-binfmt
 
 echo "5. Install Wine"
-sudo apt build-dep wine
-
 mkdir -p ~/wine
 cd ~/wine
 wget https://github.com/Kron4ek/Wine-Builds/releases/download/11.2/wine-11.2-amd64-wow64.tar.xz
