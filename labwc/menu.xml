@@ -14,6 +14,13 @@
   </item>
   <separator />
   <menu id="games-menu" label="Games">
+  <!--
+    <item label="">
+      <action name="Execute">
+        <command>sh -c "cd '/home/junny/Games/' &amp;&amp; /home/junny/wine/bin/wine "</command>
+      </action>
+    </item>
+  -->
   </menu>
   <item label="Themes">
     <action name="Execute" command="lxappearance" />
