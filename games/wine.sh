@@ -47,7 +47,7 @@ sudo systemctl restart systemd-binfmt
 echo "5. Install Wine"
 mkdir -p ~/wine
 cd ~/wine
-wget https://github.com/Kron4ek/Wine-Builds/releases/download/11.2/wine-11.2-amd64-wow64.tar.xz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/11.2/wine-11.2-amd64.tar.xz
 tar -xvf wine-11.2-amd64.tar.xz --strip-components=1
 
 echo 'export PATH="$HOME/wine/bin:$PATH"' >> ~/.bashrc
