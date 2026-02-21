@@ -13,6 +13,8 @@
     <action name="Execute" command="firefox-esr" />
   </item>
   <separator />
+  <menu id="games-menu" label="Games">
+  </menu>
   <item label="Themes">
     <action name="Execute" command="lxappearance" />
   </item>
