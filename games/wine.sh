@@ -8,7 +8,7 @@ sudo apt update
 
 echo "2. Install build tools"
 sudo apt install -y \
-cmake gcc-arm-linux-gnueabihf \
+cmake libc6:armhf gcc-arm-linux-gnueabihf \
 
 echo "3. Build and install box64"
 git clone https://github.com/ptitSeb/box64 || true
