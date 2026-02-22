@@ -37,7 +37,6 @@ cmake .. \
   -DMyGUI_LIBRARY=$HOME/src/mygui/build/lib/libMyGUIEngine.so
 
 make -j2
-sudo make install
 
 echo "-------------------------------------------------------"
 echo "Build Completed Successfully!"
