@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e
 
 echo "1. System Update and Dependencies"
