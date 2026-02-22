@@ -28,6 +28,7 @@ cp -rT ./labwc "$HOME/.config/labwc"
 cp -rT ./waybar "$HOME/.config/waybar"
 cp -rT ./xfce4 "$HOME/.config/xfce4"
 
+chmod +x "$HOME/.config/waybar/script/cava.sh"
 sudo cp -f ./config.toml /etc/greetd/config.toml
 
 echo "5. Set boot target to graphical and enable greetd service"
