@@ -6,7 +6,9 @@ sudo apt update
 sudo apt install -y \
     cmake git libluajit-5.1-dev libsqlite3-dev libopenal-dev \
     zlib1g-dev libbullet-dev libunshield-dev libfreetype-dev ffmpeg \
-
+    libgl1-mesa-dev liblz4-dev qt6-tools-dev qt6-svg-dev \
+    libicu-dev libcollada-dom-dev libyaml-cpp-dev libavformat-dev \
+    libswscale-dev 
 echo "2. Build MyGUI 3.4.3"
 mkdir -p ~/src && cd ~/src
 
