@@ -21,13 +21,13 @@ sudo unzip /tmp/JetBrainsMono.zip -d /usr/local/share/fonts/JetBrainsMono
 sudo fc-cache -fv
 
 echo "4. Install uConsole-sleep (latest version)"
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LATEST_URL=$(curl -s https://api.github.com/repos/qkdxorjs1002/uConsole-sleep/releases/latest \
     | jq -r '.assets[] | select(.name | test("deb$")) | .browser_download_url')
-wget -P "$SCRIPT_DIR" "$LATEST_URL"
-DEB_FILE=$(basename "$LATEST_URL")
 
-sudo apt install -y "$SCRIPT_DIR/$DEB_FILE"
+wget -P /tmp "$LATEST_URL"
+
+DEB_FILE=$(basename "$LATEST_URL")
+sudo apt install -y /tmp/$DEB_FILE
 
 echo "5. Copy config files and directories"
 mkdir -p "$HOME/.config"
