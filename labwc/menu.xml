@@ -23,9 +23,6 @@
   -->
   </menu>
   <menu id="utils-menu" label="Utils">
-    <item label="Mega">
-      <action name="Execute" command="megasync" />
-    </item>
     <item label="Themes">
       <action name="Execute" command="lxappearance" />
     </item>
