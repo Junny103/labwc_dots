@@ -5,7 +5,7 @@ echo "1. System Update and Dependencies"
 sudo apt update
 sudo apt install -y \
     cmake git libluajit-5.1-dev libsqlite3-dev libopenal-dev \
-    zlib1g-dev libbullet-dev libunshield-dev ffmpeg \
+    zlib1g-dev libbullet-dev libunshield-dev libfreetype-dev ffmpeg \
 
 echo "2. Build MyGUI 3.4.3"
 mkdir -p ~/src && cd ~/src
