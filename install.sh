@@ -43,17 +43,6 @@ echo "----------------------------------------------------"
 sudo systemctl set-default graphical.target
 
 echo "----------------------------------------------------"
-echo "6. Install uConsole-sleep (latest version)"
-echo "----------------------------------------------------"
-LATEST_URL=$(curl -s https://api.github.com/repos/qkdxorjs1002/uConsole-sleep/releases/latest \
-    | jq -r '.assets[] | select(.name | test("deb$")) | .browser_download_url')
-
-wget -P /tmp "$LATEST_URL"
-
-DEB_FILE=$(basename "$LATEST_URL")
-sudo apt install -y /tmp/$DEB_FILE
-
-echo "----------------------------------------------------"
 echo "Installation and system configuration complete!"
 echo "----------------------------------------------------"
 
