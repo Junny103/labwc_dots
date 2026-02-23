@@ -10,7 +10,7 @@ sudo apt install -y \
     libopenal-dev libavcodec-dev libyaml-cpp-dev \
 
 echo "----------------------------------------------------"
-echo "2. Build and install box64"
+echo "2. Build and install MyGUI"
 echo "----------------------------------------------------"
 git clone https://github.com/MyGUI/mygui.git || true
 cd mygui
@@ -36,6 +36,9 @@ echo "----------------------------------------------------"
 read -p "Do you want to install PiKISS? (y/n): " install_pikiss
 
 if [[ "$install_pikiss" == "y" || "$install_pikiss" == "Y" ]]; then
+    mkdir -p ~/utils
+    cd ~/utils
+
     git clone https://github.com/jmcerrejon/PiKISS.git || true
     cd PiKISS
     chmod +x piKiss.sh
