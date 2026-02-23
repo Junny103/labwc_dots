@@ -9,7 +9,7 @@ sudo apt install -y --no-install-recommends \
     mousepad wl-clipboard fcitx5 fcitx5-hangul fonts-noto-cjk \
     pipewire wireplumber pipewire-pulse cava \
     lxappearance librsvg2-common waybar swaybg firefox-esr \
-    megasync jq
+    jq
 
 echo "2. Download themes and icons"
 git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
