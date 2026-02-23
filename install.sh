@@ -11,7 +11,6 @@ sudo apt install -y --no-install-recommends \
     mousepad wl-clipboard fcitx5 fcitx5-hangul fonts-noto-cjk \
     pipewire wireplumber pipewire-pulse cava \
     lxappearance librsvg2-common waybar swaybg firefox-esr \
-    jq
 
 echo "----------------------------------------------------"
 echo "2. Download themes and icons"
@@ -26,7 +25,9 @@ sudo mkdir -p /usr/local/share/fonts/JetBrainsMono
 sudo unzip /tmp/JetBrainsMono.zip -d /usr/local/share/fonts/JetBrainsMono
 sudo fc-cache -fv
 
+echo "----------------------------------------------------"
 echo "4. Copy config files and directories"
+echo "----------------------------------------------------"
 mkdir -p "$HOME/.config"
 
 cp -rT ./alacritty "$HOME/.config/alacritty"
