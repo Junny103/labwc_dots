@@ -9,7 +9,7 @@ sudo apt install -y --no-install-recommends \
     mousepad wl-clipboard fcitx5 fcitx5-hangul fonts-noto-cjk \
     pipewire wireplumber pipewire-pulse cava \
     lxappearance librsvg2-common waybar swaybg firefox-esr \
-    megasync
+    megasync jq
 
 echo "2. Download themes and icons"
 git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
@@ -20,8 +20,16 @@ sudo mkdir -p /usr/local/share/fonts/JetBrainsMono
 sudo unzip /tmp/JetBrainsMono.zip -d /usr/local/share/fonts/JetBrainsMono
 sudo fc-cache -fv
 
-echo "4. Copy config files and directories"
+echo "4. Install uConsole-sleep (latest version)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+LATEST_URL=$(curl -s https://api.github.com/repos/qkdxorjs1002/uConsole-sleep/releases/latest \
+    | jq -r '.assets[] | select(.name | test("deb$")) | .browser_download_url')
+wget -P "$SCRIPT_DIR" "$LATEST_URL"
+DEB_FILE=$(basename "$LATEST_URL")
 
+sudo apt install -y "$SCRIPT_DIR/$DEB_FILE"
+
+echo "5. Copy config files and directories"
 mkdir -p "$HOME/.config"
 
 cp -rT ./alacritty "$HOME/.config/alacritty"
@@ -32,7 +40,7 @@ cp -rT ./xfce4 "$HOME/.config/xfce4"
 chmod +x "$HOME/.config/waybar/script/cava.sh"
 sudo cp -f ./config.toml /etc/greetd/config.toml
 
-echo "5. Set boot target to graphical and enable greetd service"
+echo "6. Set boot target to graphical and enable greetd service"
 sudo systemctl set-default graphical.target
 
 echo "----------------------------------------------------"
