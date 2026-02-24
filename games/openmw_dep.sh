@@ -6,7 +6,7 @@ echo "1. Update system and install packages"
 echo "----------------------------------------------------"
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y \
-    cmake libfreetype-dev libqt6opengl6-dev \
+    cmake libfreetype-dev qt6-base-dev \
     libopenal-dev libavcodec-dev libyaml-cpp-dev \
 
 echo "----------------------------------------------------"
