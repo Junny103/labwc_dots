@@ -36,15 +36,17 @@ echo "----------------------------------------------------"
 read -p "Do you want to install PiKISS? (y/n): " install_pikiss
 
 if [[ "$install_pikiss" == "y" || "$install_pikiss" == "Y" ]]; then
-    mkdir -p ~/utils
-    cd ~/utils
+    mkdir -p $HOME/utils
+    cd $HOME/utils
 
     git clone https://github.com/jmcerrejon/PiKISS.git || true
     cd PiKISS
     chmod +x piKiss.sh
     ./piKiss.sh
 else
+    echo "----------------------------------------------------"
     echo "Skipping PiKISS installation."
+    echo "----------------------------------------------------"
 fi
 
 echo "----------------------------------------------------"
