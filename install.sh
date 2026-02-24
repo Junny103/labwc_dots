@@ -10,7 +10,8 @@ sudo apt install -y --no-install-recommends \
     thunar thunar-archive-plugin xarchiver \
     mousepad wl-clipboard fcitx5 fcitx5-hangul fonts-noto-cjk \
     pipewire wireplumber pipewire-pulse cava \
-    lxappearance librsvg2-common waybar swaybg firefox-esr \
+    lxappearance librsvg2-common wlopm swayidle swaybg \
+    waybar firefox-esr \
 
 echo "----------------------------------------------------"
 echo "2. Download themes and icons"
