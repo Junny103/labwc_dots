@@ -22,6 +22,7 @@ echo "----------------------------------------------------"
 echo "3. Download and install JetBrainsMono Nerd Font"
 echo "----------------------------------------------------"
 wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+
 sudo mkdir -p /usr/local/share/fonts/JetBrainsMono
 sudo unzip /tmp/JetBrainsMono.zip -d /usr/local/share/fonts/JetBrainsMono
 sudo fc-cache -fv
