@@ -1,4 +1,10 @@
 wlr-randr --output DSI-1 --transform 270 &
 fcitx5 -d &
 waybar &
-swaybg -i "$HOME/.config/labwc/bg.jpg" -m fill &
+swaybg -i \
+  "$HOME/.config/labwc/bg.jpg" -m fill &
+swayidle -w \
+  timeout 60 'brightnessctl set 10%' \
+  resume  'brightnessctl set 50%' \
+  timeout 120 'wlopm --off DSI-1' \
+  resume 'wlopm --on DSI-1' &
