@@ -35,9 +35,9 @@ cp -rT ./alacritty "$HOME/.config/alacritty"
 cp -rT ./labwc "$HOME/.config/labwc"
 cp -rT ./waybar "$HOME/.config/waybar"
 cp -rT ./xfce4 "$HOME/.config/xfce4"
+sudo cp -f ./greetd/config.toml /etc/greetd/config.toml
 
 chmod +x "$HOME/.config/waybar/script/cava.sh"
-sudo cp -f ./config.toml /etc/greetd/config.toml
 
 echo "----------------------------------------------------"
 echo "5. Set boot target to graphical and enable greetd service"
