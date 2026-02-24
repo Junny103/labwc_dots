@@ -47,15 +47,3 @@ sudo systemctl set-default graphical.target
 echo "----------------------------------------------------"
 echo "Installation and system configuration complete!"
 echo "----------------------------------------------------"
-
-echo "System will reboot automatically in 5 seconds."
-echo "Press 'n' to cancel the reboot."
-
-read -t 5 -p "Cancel reboot (n): " answer
-
-if [[ "$answer" =~ ^[Nn]$ ]]; then
-    echo "Reboot canceled. You can reboot manually later."
-else
-    echo "Rebooting now..."
-    sudo reboot
-fi
