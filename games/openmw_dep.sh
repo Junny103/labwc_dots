@@ -8,6 +8,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y \
     cmake libfreetype-dev qt6-base-dev libswscale-dev \
     libopenal-dev libavcodec-dev libavformat-dev libyaml-cpp-dev \
+    libcollada-dom-dev libjpeg-dev
     
 echo "----------------------------------------------------"
 echo "2. Build and install MyGUI"
