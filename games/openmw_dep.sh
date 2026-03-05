@@ -6,9 +6,10 @@ echo "1. Update system and install packages"
 echo "----------------------------------------------------"
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y \
-    cmake libfreetype-dev qt6-base-dev libswscale-dev \
+    cmake libfontconfig1-dev libfreetype-dev qt6-base-dev libswscale-dev \
     libopenal-dev libavcodec-dev libavformat-dev libyaml-cpp-dev \
-    libcollada-dom-dev libjpeg-dev
+    libcollada-dom-dev libjpeg-dev libsquish-dev libegl1-mesa-dev \
+    libgles2-mesa-dev
     
 echo "----------------------------------------------------"
 echo "2. Build and install MyGUI"
