@@ -43,7 +43,6 @@ if [[ "$install_pikiss" == "y" || "$install_pikiss" == "Y" ]]; then
     cd PiKISS
     chmod +x piKiss.sh
     ./piKiss.sh
-    
 else
     echo "----------------------------------------------------"
     echo "Skipping PiKISS installation."
