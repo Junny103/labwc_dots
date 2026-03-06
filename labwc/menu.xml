@@ -13,15 +13,15 @@
     <action name="Execute" command="firefox-esr" />
   </item>
   <separator />
-  <menu id="games-menu" label="Games">
   <!--
+  <menu id="games-menu" label="Games">
     <item label="OpenMW">
       <action name="Execute">
         <command>sh -c "cd '/home/junny/games/openmw/' &amp;&amp; ./openmw-launcher "</command>
       </action>
     </item>
-  -->
   </menu>
+  -->
   <menu id="utils-menu" label="Utils">
     <!--
     <item label="PiKISS">
