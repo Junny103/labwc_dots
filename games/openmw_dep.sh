@@ -6,11 +6,9 @@ echo "1. Update system and install packages"
 echo "----------------------------------------------------"
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y \
-    cmake libfontconfig1-dev libfreetype-dev qt6-base-dev libswscale-dev \
+    cmake libfreetype-dev qt6-base-dev libswscale-dev \
     libopenal-dev libavcodec-dev libavformat-dev libyaml-cpp-dev \
-    libcollada-dom-dev libjpeg-dev libsquish-dev libegl1-mesa-dev \
-    libgles2-mesa-dev
-    
+
 echo "----------------------------------------------------"
 echo "2. Build and install MyGUI"
 echo "----------------------------------------------------"
@@ -31,34 +29,8 @@ make -j$(nproc)
 sudo make install
 sudo ldconfig
 
-cd ../../
-
 echo "----------------------------------------------------"
-echo "3. Build and install OpenMW's OpenSceneGraph fork (OpenMW/osg)"
-echo "----------------------------------------------------"
-git clone https://github.com/OpenMW/osg.git || true
-cd osg
-
-mkdir -p build && cd build
-cmake .. \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DBUILD_OSG_PLUGINS_BY_DEFAULT=0 \
-  -DBUILD_OSG_PLUGIN_OSG=1 \
-  -DBUILD_OSG_PLUGIN_DAE=1 \
-  -DBUILD_OSG_PLUGIN_DDS=1 \
-  -DBUILD_OSG_PLUGIN_TGA=1 \
-  -DBUILD_OSG_PLUGIN_BMP=1 \
-  -DBUILD_OSG_PLUGIN_JPEG=1 \
-  -DBUILD_OSG_PLUGIN_PNG=1 \
-  -DBUILD_OSG_PLUGIN_FREETYPE=1 \
-  -DBUILD_OSG_DEPRECATED_SERIALIZERS=0
-  
-make -j$(nproc)
-sudo make install
-sudo ldconfig
-
-echo "----------------------------------------------------"
-echo "4. Install PiKISS (optional)"
+echo "3. Install PiKISS (optional)"
 echo "----------------------------------------------------"
 
 read -p "Do you want to install PiKISS? (y/n): " install_pikiss
@@ -71,6 +43,7 @@ if [[ "$install_pikiss" == "y" || "$install_pikiss" == "Y" ]]; then
     cd PiKISS
     chmod +x piKiss.sh
     ./piKiss.sh
+    
 else
     echo "----------------------------------------------------"
     echo "Skipping PiKISS installation."
